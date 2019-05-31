@@ -1,5 +1,8 @@
 # drone-plugin-jsonnet-check
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/drone-plugin-jsonnet-check.svg)](https://github.com/suzuki-shunsuke/drone-plugin-jsonnet-check)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/drone-plugin-jsonnet-check/master/LICENSE)
+
 The [Drone plugin](https://docs.drone.io/plugins/) to check whether .drone.yml is generated from .drone.jsonnet properly.
 
 ## Overview
