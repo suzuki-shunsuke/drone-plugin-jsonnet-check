@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "build": "docker build -t suzukishunsuke/jsonnet-check:local .",
+    "test": "bats -t scripts/test.bats",
+    "test-plugin": "bats -t scripts/test-plugin.bats",
+    "tests/drone.yml": "drone jsonnet --format --source test-data/drone.jsonnet --target test-data/drone.yml",
+    "ci-local": "drone exec --event pull_request"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm t",
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-angular": "^7.1.2",
+    "husky": "^1.1.3"
+  }
+}
