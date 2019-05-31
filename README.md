@@ -1,9 +1,13 @@
 # drone-plugin-jsonnet-check
 
+[![Build Status](https://cloud.drone.io/api/badges/suzuki-shunsuke/drone-plugin-jsonnet-check/status.svg)](https://cloud.drone.io/suzuki-shunsuke/drone-plugin-jsonnet-check)
 [![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/drone-plugin-jsonnet-check.svg)](https://github.com/suzuki-shunsuke/drone-plugin-jsonnet-check)
+[![GitHub tag](https://img.shields.io/github/tag/suzuki-shunsuke/drone-plugin-jsonnet-check.svg)](https://github.com/suzuki-shunsuke/drone-plugin-jsonnet-check/releases)
 [![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/drone-plugin-jsonnet-check/master/LICENSE)
 
-The [Drone plugin](https://docs.drone.io/plugins/) to check whether .drone.yml is generated from .drone.jsonnet properly.
+[Drone plugin](https://docs.drone.io/plugins/) to check whether .drone.yml is generated from .drone.jsonnet properly.
+
+https://hub.docker.com/r/suzukishunsuke/jsonnet-check
 
 ## Overview
 
@@ -30,7 +34,7 @@ This converts .drone.jsonnet to the yaml format and exit with return code non ze
   steps: [
     {
       name: "test .drone.yml",
-      image: "suzukishunsuke/jsonnet-check:v0.1.0",
+      image: "suzukishunsuke/jsonnet-check:v1.1.1-v0.1.0",
       settings: {
         format: true,
       },
