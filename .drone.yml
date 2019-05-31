@@ -1,0 +1,14 @@
+---
+kind: pipeline
+name: test
+steps:
+- name: download drone-cli
+  image: drone/cli:1.1.1-alpine
+  commands:
+  - cp /bin/drone .
+- name: test .drone.yml
+  image: bats/bats:v1.1.0
+  commands:
+  - bats --version
+  - mv drone /usr/local/bin
+  - bats scripts/test.bats
