@@ -7,7 +7,7 @@ steps:
   commands:
   - cp /bin/drone .
 - name: test .drone.yml
-  image: bats/bats:v1.1.0
+  image: bats/bats:1.2.1
   commands:
   - bats --version
   - mv drone /usr/local/bin
