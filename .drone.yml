@@ -3,7 +3,7 @@ kind: pipeline
 name: test
 steps:
 - name: download drone-cli
-  image: drone/cli:1.2.2-alpine
+  image: drone/cli:1.5.0-alpine
   commands:
   - cp /bin/drone .
 - name: test .drone.yml
